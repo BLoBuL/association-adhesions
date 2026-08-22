@@ -16,6 +16,9 @@ foreach (array('spip_asso_categories_adherents', 'spip_asso_cotisations') as $ta
 		$erreurs[] = 'table non déclarée: ' . $table;
 	}
 }
+if (strpos($base, "'devise'") === false) {
+	$erreurs[] = 'la devise doit être persistée par le module Adhésions';
+}
 if (strpos($base, 'spip_asso_comptes') !== false) {
 	$erreurs[] = 'la table comptable ne doit pas appartenir à Adhésions';
 }
