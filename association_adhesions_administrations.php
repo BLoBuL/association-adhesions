@@ -19,6 +19,7 @@ function association_adhesions_upgrade($nom_meta_base_version, $version_cible) {
 			'spip_asso_cotisations',
 		)),
 	);
+	$maj['1.1.0'] = $maj['create'];
 	maj_plugin($nom_meta_base_version, $version_cible, $maj);
 }
 
