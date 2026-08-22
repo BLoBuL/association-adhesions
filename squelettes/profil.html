@@ -15,9 +15,9 @@
 			<div class="content" id="content">
 				<p class="arbo"><a href="#URL_SITE_SPIP/"><:accueil_site:></a> &gt; <strong class="on"><:association:profil_de_lassociation:></strong></p>
 				[(#SESSION{id_auteur}|oui)
-					<INCLURE{fond=squelettes/content/fiche_adherent,env} />
-					<INCLURE{fond=squelettes/content/inc/profil-statut_cotisation,env} />
-					<INCLURE{fond=squelettes/content/inc/profil-newsletter,env} />
+					<INCLURE{fond=content/fiche_adherent,env} />
+					<INCLURE{fond=content/inc/profil-statut_cotisation,env} />
+					<INCLURE{fond=content/inc/profil-newsletter,env} />
 				]
 				[(#SESSION{id_auteur}|non)
 					<h1><:association:profil_de_lassociation:></h1>
