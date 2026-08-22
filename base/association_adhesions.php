@@ -59,3 +59,9 @@ function association_adhesions_declarer_tables_principales($tables) {
 
 	return $tables;
 }
+
+function association_adhesions_declarer_tables_interfaces($interfaces) {
+	$interfaces['table_des_tables']['asso_categories_adherents'] = 'asso_categories_adherents';
+	$interfaces['table_des_tables']['asso_cotisations'] = 'asso_cotisations';
+	return $interfaces;
+}
