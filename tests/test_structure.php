@@ -24,6 +24,11 @@ $administrations = file_get_contents($racine . '/association_adhesions_administr
 if (strpos($administrations, 'sql_drop_table') !== false) {
 	$erreurs[] = 'la désinstallation ne doit pas supprimer les données métier';
 }
+foreach (array('profil.html', 'fiche_adherent.html', 'inscription.html') as $page) {
+	if (!is_file($racine . '/squelettes/' . $page)) {
+		$erreurs[] = 'page publique absente: ' . $page;
+	}
+}
 
 if ($erreurs) {
 	fwrite(STDERR, implode("\n", $erreurs) . "\n");
