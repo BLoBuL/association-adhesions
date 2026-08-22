@@ -1,7 +1,7 @@
 <paquet
 	prefix="association_adhesions"
 	categorie="auteur"
-	version="4.0.0-dev"
+	version="4.0.0"
 	etat="dev"
 	compatibilite="[4.0.0;4.*]"
 	schema="1.0.0"
